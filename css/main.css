@@ -1,0 +1,525 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,600;0,700;0,800;0,900;1,400;1,700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --sky-blue: #0089b7;
+    --too-dark-blue: #003251;
+    --less-dark-blue: #003d62;
+    --light-yellow: #fff700;
+    --white: white;
+    --black: #000;
+}
+
+/* utility class */
+.uni-ppadding {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.uni-ppadding2 {
+    padding-left: 20%;
+    padding-right: 20%
+}
+
+.h-flex {
+    display: flex;
+}
+
+.v-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+/* header */
+header {
+    justify-content: space-between;
+    background-color: var(--sky-blue);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+header nav ul {
+    column-gap: 15px;
+    font-weight: 500;
+    align-items: center;
+    height: 100%;
+
+}
+
+header h2 a {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+header nav ul a {
+    color: var(--white);
+    transition: border-bottom 0.3s ease-in-out;
+    border-bottom: 4px solid transparent;
+}
+
+header nav ul a:hover {
+    border-bottom: 4px solid var(--light-yellow);
+}
+
+/* hero section */
+#hero-sec {
+    justify-content: space-between;
+    background-color: var(--less-dark-blue);
+    padding-top: 35px;
+    padding-bottom: 35px;
+    align-items: center;
+    border-bottom: 4px solid var(--sky-blue);
+
+}
+
+.hero-text {
+    align-items: flex-start;
+    flex-direction: column;
+    width: 548px;
+    overflow-x: hidden;
+}
+
+#hi {
+    color: var(--light-yellow);
+    font-size: 3.5rem;
+}
+
+
+#this {
+    font-size: 1.5rem;
+}
+
+.hero-text h2 {
+    color: var(--white);
+    font-size: 2.4rem;
+}
+
+/* animation stuffs */
+#h2-sec {
+    margin-left: -525px;
+    animation-name: typing;
+    transition: margin-left 0.4s linear;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes typing {
+    0% {
+        margin-left: -473px;
+    }
+
+    10% {
+        margin-left: -421px;
+    }
+
+    20% {
+        margin-left: -369px;
+    }
+
+    30% {
+        margin-left: -317px;
+    }
+
+    40% {
+        margin-left: -265px;
+    }
+
+    50% {
+        margin-left: -213px;
+    }
+
+    60% {
+        margin-left: -161px;
+    }
+
+    70% {
+        margin-left: -109px;
+    }
+
+    80% {
+        margin-left: -57px;
+    }
+
+    90% {
+        margin-left: -5px;
+    }
+
+    100% {
+        margin-left: 0px;
+    }
+}
+
+/* pipe */
+#pipe {
+    color: #ff8d00;
+    animation-name: blinking;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    visibility: visible;
+    font-size: 3.3rem;
+
+}
+
+@keyframes blinking {
+    0% {
+        visibility: visible;
+    }
+
+    25% {
+        visibility: hidden;
+    }
+
+    50% {
+        visibility: visible;
+    }
+
+    75% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: visible;
+    }
+}
+
+/* projects section */
+#projects {
+    background-color: var(--too-dark-blue);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 4px solid var(--sky-blue);
+}
+
+.head-txt h1 {
+    font-size: 4rem;
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.pro-feed {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+
+}
+
+.feed-items {
+    width: 27%;
+    border-radius: 5px;
+    height: 360px;
+    overflow-y: hidden;
+    position: relative;
+    transition: transform 0.4s ease-in-out;
+
+}
+
+.feed-items figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.f-item-txt {
+    text-align: center;
+    background-color: var(--white);
+    padding: 17px 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: absolute;
+    width: 100%;
+    bottom: -63px;
+    left: 0px;
+    transition: bottom 0.2s linear;
+}
+
+/* .feed-items{
+    
+} */
+.feed-items:hover {
+    transform: scale(1.05);
+}
+
+.feed-items:hover .f-item-txt {
+    bottom: 0px;
+    box-shadow: 0px 0px 5px gray;
+}
+
+.f-item-txt .f-item-txt h3 {
+    font-size: 1.3rem;
+    color: var(--too-dark-blue);
+}
+
+/* f0oter start here */
+.top-footer {
+    background-color: var(--less-dark-blue);
+    height: 500px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+.top-footer h2 {
+    font-size: 3rem;
+    color: var(--white);
+    text-align: center;
+}
+
+.socials {
+    flex-wrap: wrap;
+    width: 600px;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+.socials a {
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 700;
+    display: block;
+    width: 30%;
+    text-align: center;
+}
+
+.bottom-footer {
+    background-color: var(--too-dark-blue);
+    text-align: center;
+    padding: 20px 0px;
+    color: white;
+}
+
+.bottom-footer a {
+    color: var(--light-yellow);
+    text-decoration: underline;
+}
+
+/* Rsesponsive for phone[500px] */
+@media screen and (max-width:500px) {
+
+    html,
+    body {
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+        width: 100%;
+        height: 100%;
+    }
+
+    .uni-ppadding {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .uni-ppadding2 {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    /* haraer section */
+    header nav ul {
+        padding-top: 6px;
+    }
+
+    /* hero Section */
+    #hero-sec {
+        flex-direction: column;
+    }
+
+    #hero-sec figure {
+        text-align: center;
+    }
+
+    #hero-sec figure img {
+        width: 85%;
+    }
+
+    .hero-text {
+        width: 370px;
+        margin: 0px auto;
+        justify-content: center;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+
+    #hi {
+        font-size: 2.5rem;
+    }
+
+    #this {
+        font-size: 1rem;
+    }
+
+    #pipe {
+        font-size: 1.8rem;
+    }
+
+    /* project section */
+    .head-txt h1 {
+        font-size: 2.5rem;
+    }
+
+    .pro-feed {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feed-items {
+        width: 90%;
+    }
+
+    /* footer section */
+    .top-footer {
+        height: 300px;
+    }
+
+    .top-footer h2 {
+        font-size: 1.6rem;
+    }
+
+    .socials {
+        width: 375px;
+        margin: 0 auto;
+    }
+
+    .socials a {
+        font-size: 1rem;
+    }
+
+    .bottom-footer p {
+        font-size: 0.7rem;
+    }
+}
+
+/* responsive for tab from 501-768px */
+@media screen and (min-width:501px) and (max-width:768px) {
+
+    .uni-ppadding {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .uni-ppadding2 {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    /* hero section */
+
+
+    #hero-sec {
+        flex-direction: column;
+    }
+
+    #hero-sec figure {
+        text-align: center;
+    }
+
+    #hero-sec figure img {
+        width: 100%;
+    }
+
+    .hero-text {
+        width: 541px;
+        margin: 0px auto;
+        justify-content: center;
+    }
+
+    .hero-text h2:first-child {
+        text-align: center;
+        width: 100%;
+    }
+
+    /* projects */
+    .head-txt h1 {
+        font-size: 3.5rem;
+    }
+
+    .feed-items {
+        width: 47%;
+
+    }
+
+    /* footer */
+    .top-footer {
+        height: 450px;
+    }
+
+    .top-footer h2 {
+        font-size: 2.5rem;
+    }
+
+    .socials a {
+        font-size: 1.4rem;
+    }
+}
+
+/* repossive for 769px to 991px */
+@media screen and (min-width:769px) and (max-width:991px) {
+    html,
+    body {
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+        width: 100%;
+        height: 100%;
+    }
+    .uni-ppadding {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .uni-ppadding2 {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    
+    #hero-sec {
+        justify-content: space-between;
+        column-gap: 30px;
+    }
+
+    #hero-sec figure img {
+        width: 100%;
+    }
+
+    #hi {
+        font-size: 2rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.4rem;
+    }
+    #pipe {
+        font-size: 2.3rem;
+    }
+    .feed-items {
+        width: 30%;
+        height: 300px;
+    }
+}
